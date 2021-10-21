@@ -1,0 +1,193 @@
+// CSS reset
+/* CSS reset */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* 盒模型預設 */
+*,*:before*:after{
+	box-sizing: border-box;
+}
+/* 消除圖片空隙 、圖片自適應父層*/
+img{
+	vertical-align:middle;
+	max-width:100%;
+	height:auto;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+// container容器
+.container{
+    padding: 0 30px;
+    max-width: 1080px;
+    margin: 0 auto;
+    background-color: rgb(236, 228, 228);
+}
+
+
+// 搜尋列
+.search{
+    background-color: rgb(190, 183, 183);
+    margin: 0 auto;
+    padding: 20px;
+    .search-area{
+        padding: 10px;
+        border-radius: 3px;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        i{
+            width: 3%;
+        }
+        input{
+            width: 97%;
+            border: none;
+            line-height: 30px;
+        }
+    }
+}
+// 輪播牆
+.list{
+    img{
+        width: 100%;
+    }
+}
+.banner{
+    position: relative;
+}
+.page-up, .page-down{
+    position: absolute;
+    top: 125px;
+    font-size: 24px;
+    color: white;
+}
+.page-up{
+    left: 30px;
+}
+.page-down{
+    right: 30px;
+}
+
+// 倒數計時
+.text-center{
+    padding: 10px;
+    margin: 10px 0;
+    background-color: white;
+    border-radius: 3px;
+}
+
+// 主商品區
+.main{
+    padding: 10px 0;
+    display: flex;
+    // 左側類別選單
+    .menu{
+        max-width: 10%;
+        li{
+            border: 1px solid rgb(224, 222, 222);
+            background-color: white;
+            a{
+                padding: 10px;
+                line-height: 1.5;
+            }
+        }
+        
+    }
+    // 商品列表
+    .product{
+        max-width: 90%;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        justify-content: space-between;
+        li{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            width: 19%;
+            margin: 0px 0px 5px 5px;
+            // border: 1px solid gray;
+            border-radius: 3px;
+            background-color: white;
+            img{
+                margin-bottom: 5px;
+            }
+        }
+    }
+}
+
+// top按鈕
+.toTop-arrow {
+	width: 2.5rem;
+	height: 2.5rem;
+	padding: 0;
+	margin: 0;
+	border: 0;
+	border-radius: 33%;
+	opacity: 0.6;
+	background: #000;
+	cursor: pointer;
+	position:fixed;
+	right: 1rem;
+	bottom: 1rem;
+	display: none;
+}
+.toTop-arrow::before, .toTop-arrow::after {
+	width: 18px;
+	height: 5px;
+	border-radius: 3px;
+	background: #f90;
+	position: absolute;
+	content: "";
+}
+.toTop-arrow::before {
+	transform: rotate(-45deg) translate(0, -50%);
+	left: 0.5rem;
+}
+.toTop-arrow::after {
+	transform: rotate(45deg) translate(0, -50%);
+	right: 0.5rem;
+}
+.toTop-arrow:focus {outline: none;}

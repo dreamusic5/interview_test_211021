@@ -1,0 +1,229 @@
+@charset "UTF-8";
+/* CSS reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 盒模型預設 */
+*, *:before*:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* 消除圖片空隙 、圖片自適應父層*/
+img {
+  vertical-align: middle;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.container {
+  padding: 0 30px;
+  max-width: 1080px;
+  margin: 0 auto;
+  background-color: #ece4e4;
+}
+
+.search {
+  background-color: #beb7b7;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.search .search-area {
+  padding: 10px;
+  border-radius: 3px;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.search .search-area i {
+  width: 3%;
+}
+
+.search .search-area input {
+  width: 97%;
+  border: none;
+  line-height: 30px;
+}
+
+.list img {
+  width: 100%;
+}
+
+.banner {
+  position: relative;
+}
+
+.page-up, .page-down {
+  position: absolute;
+  top: 125px;
+  font-size: 24px;
+  color: white;
+}
+
+.page-up {
+  left: 30px;
+}
+
+.page-down {
+  right: 30px;
+}
+
+.text-center {
+  padding: 10px;
+  margin: 10px 0;
+  background-color: white;
+  border-radius: 3px;
+}
+
+.main {
+  padding: 10px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main .menu {
+  max-width: 10%;
+}
+
+.main .menu li {
+  border: 1px solid #e0dede;
+  background-color: white;
+}
+
+.main .menu li a {
+  padding: 10px;
+  line-height: 1.5;
+}
+
+.main .product {
+  max-width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.main .product li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  width: 19%;
+  margin: 0px 0px 5px 5px;
+  border-radius: 3px;
+  background-color: white;
+}
+
+.main .product li img {
+  margin-bottom: 5px;
+}
+
+.toTop-arrow {
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  border-radius: 33%;
+  opacity: 0.6;
+  background: #000;
+  cursor: pointer;
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  display: none;
+}
+
+.toTop-arrow::before, .toTop-arrow::after {
+  width: 18px;
+  height: 5px;
+  border-radius: 3px;
+  background: #f90;
+  position: absolute;
+  content: "";
+}
+
+.toTop-arrow::before {
+  -webkit-transform: rotate(-45deg) translate(0, -50%);
+          transform: rotate(-45deg) translate(0, -50%);
+  left: 0.5rem;
+}
+
+.toTop-arrow::after {
+  -webkit-transform: rotate(45deg) translate(0, -50%);
+          transform: rotate(45deg) translate(0, -50%);
+  right: 0.5rem;
+}
+
+.toTop-arrow:focus {
+  outline: none;
+}
+/*# sourceMappingURL=style.css.map */
